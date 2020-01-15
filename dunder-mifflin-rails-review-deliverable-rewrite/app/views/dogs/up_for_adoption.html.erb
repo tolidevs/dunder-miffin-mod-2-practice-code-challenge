@@ -1,0 +1,8 @@
+<h1>All the doggies up for adoption: </h1>
+
+<ol>
+    <% @dogs_for_adoption.each do |dog| %>
+        <li><%= dog.name %> - <%= link_to "Adopt this dog", adopt_this_dog_path(dog) %></li>
+    <% end %>
+
+</ol>

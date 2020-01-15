@@ -1,0 +1,9 @@
+<h1>Adopt <%= @dog.name %></h1>
+
+<%= form_for @dog, url: "/dogs/#{@dog.id}/adoption" do |f| %>
+    <%= f.label :select_an_employee %>
+    <%= f.collection_select :employee_ids, @employees, :id, :full_name %>
+
+    <%= f.submit "Adopt Dog" %>
+<% end %>
+
